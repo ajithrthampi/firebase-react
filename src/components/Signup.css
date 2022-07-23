@@ -1,16 +1,16 @@
-/* body {
+.mainbody{
     background-color: #b26363;
     display: flex;
     justify-content: center;
-    align-content: center;
-    width: 100%;
+     align-content: center; 
+     width: 100%; 
     align-items: center;
     height: 100vh;
   }
-  
+
   .box {
     border: 1px solid #181717;
-    background-color: rgb(219, 225, 228);
+    background-color:rgb(208, 219, 232);
   }
   
   .g-btn {
@@ -23,4 +23,4 @@
   .g-btn > div > svg {
     width: 40px !important;
     height: 38px !important;
-  } */
+  }

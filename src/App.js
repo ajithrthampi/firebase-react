@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Signup from "./components/Signup"
+import Login from "./components/Login"
+import { Routes, Route } from "react-router-dom"
+// import { Container, Row, Col} from "react-bootstrap"
+import { UserAuthContextProvider } from "./context/UserAuthContext"
+import Home from "./components/Home"
+import ProtectedRoute from "./components/ProtectedRoute"
+// import AdminList from "./components/Admin/AdminList"
+import MainAdmin from "./components/Admin/MainAdmin"
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <UserAuthContextProvider>
+      <Routes>
+        <Route exact path="/home" element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/admin" element={<MainAdmin />} />
+      </Routes>
+    </UserAuthContextProvider>
+
+
+  )
 }
 
-export default App;
+export default App
