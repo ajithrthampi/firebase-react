@@ -6,13 +6,12 @@ import {getFirestore} from "firebase/firestore"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCcQ_jHX21Krc7oEJETydbsSIDNzmkdc_0",
-  authDomain: "react-authentication-5b432.firebaseapp.com",
-  projectId: "react-authentication-5b432",
-  storageBucket: "react-authentication-5b432.appspot.com",
-  messagingSenderId: "409009885967",
-  appId: "1:409009885967:web:a3d965147ee4b15b76a47a",
-  measurementId: "G-VTRW705LYZ"
+  apiKey: "AIzaSyDW5SJyxau4Ymv2yy8U0g62QOsvNMxNVmU",
+  authDomain: "incubation-react.firebaseapp.com",
+  projectId: "incubation-react",
+  storageBucket: "incubation-react.appspot.com",
+  messagingSenderId: "473644326791",
+  appId: "1:473644326791:web:a406c3ba3c95acf3d1fd22"
 };
 
 // Initialize Firebase

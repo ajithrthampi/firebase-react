@@ -6,6 +6,8 @@ import "./Login.css"
 
 const Login = () => {
 
+    const username = "rama@gmail.com"
+    const pin = "111111"
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError ] = useState("")  
@@ -14,13 +16,17 @@ const Login = () => {
     const inputRef = useRef("")
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError("");
+        if(email === username && password === pin ){
+             navigate("/application")
+        } else{
+            setError("");
          try {
             await logIn(email, password )
             navigate('/home')
          } catch (err) {
            setError(err.message)
          }
+        }
     }
 
     useEffect(() => {
